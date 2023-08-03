@@ -17,13 +17,13 @@
 </head>
 
 <body>
-    <div class="ls-topbar ">
+    <div class="ls-topbar" style=" height:65px;">
 
         <script src="js/app.js" charset="utf-8"></script>
         <!-- Barra de Notificações -->
         <div class="ls-notification-topbar">
             <!-- Dropdown com detalhes da conta de usuário -->
-            <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
+            <div data-ls-module="dropdown" class="ls-dropdown ls-user-account"  style=" height:65px;">
                 <a href="#" class="ls-ico-user">
                     <span class="ls-name">{{ Auth::user()->name }}</span>
                 </a>
@@ -42,8 +42,8 @@
         <h1 class="ls-brand-name">
             <div class="container-fluid">
                 <!-- <div class="form-group col-md-6" style="width: 200px; height: 50px; top: -8px; background-color: #fff;"> -->
-                <img src="{{ URL::asset('images/LogoHSJ.png') }}" alt="profile Pic"
-                    style="width: 160px; height: 42px; top: -8px; background-color: #fff;">
+                <img src="{{ URL::asset('images/LogoHSJ2.png') }}" alt="profile Pic"
+                    style="width: 198px; height: 60px; margin-left:-10px; margin-top: -10px;">
 
                 <!-- </div> -->
 
@@ -82,12 +82,36 @@
                                 <small
                                     style="border: 1px solid red; padding: 0px 4px; border-radius: 50px; background-color: red; color:#fff; position: relative; left: 50px;">
                                     <?php echo DB::table('vehiclerequests')
-                                    ->where('statussolicitacao', 'PENDENTE')
-                                    ->count(); ?>
-                                </small></a>
+                                        ->where('statussolicitacao', 'PENDENTE')
+                                        ->count(); ?>
+                                </small>
+                                &nbsp;
+                                <small
+                                    style="border: 1px solid green; padding: 0px 4px; border-radius: 50px; background-color: green; color:#fff; position: relative; left: 50px;">
+                                    <?php echo DB::table('vehiclerequests')
+                                        ->where('statussolicitacao', 'AUTORIZADA')
+                                        ->count(); ?>
+                                </small>
+                            </a>
                             <ul>
-                                <li><a href="/authorization-add">Definir Roteiros</a></li>
-                                <li><a href="{{ route('authorizations') }}">Listar Solicitações <br>e Roteios</a></li>
+                                <li>
+                                    <a href="/authorization-add">Definir Roteiros
+                                        <small
+                                            style="border: 1px solid red; padding: 0px 4px; border-radius: 50px; background-color: red; color:#fff; position: relative; left: 50px;">
+                                            <?php echo DB::table('vehiclerequests')
+                                                ->where('statussolicitacao', 'PENDENTE')
+                                                ->count(); ?>
+                                        </small>
+                                    </a>
+                                </li>
+                                <li><a href="{{ route('authorizations') }}">Listar Solicitações <br>e Roteios
+                                        <small
+                                            style="border: 1px solid green; padding: 0px 4px; border-radius: 50px; background-color: green; color:#fff; position: relative; left: 50px;">
+                                            <?php echo DB::table('vehiclerequests')
+                                                ->where('statussolicitacao', 'AUTORIZADA')
+                                                ->count(); ?>
+                                        </small>
+                                    </a></li>
                             </ul>
                         </li>
                     @endcan
@@ -156,7 +180,7 @@
                     <!-- /SOBRE -->
 
                     <!-- AJUDA  -->
-                    <li><a class="ls-ico-question" href="/informacao/tutorial">Ajuda</a></li>
+                    <li><a class="ls-ico-question" href="/informacao/tutorial">Tutorial do Sistema</a></li>
                     <!-- /AJUDA  -->
                 </ul>
             </nav>
@@ -175,8 +199,7 @@
 
     <!-- We recommended use jQuery 1.10 or up -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="http://assets.locaweb.com.br/locastyle/3.10.0/javascripts/locastyle.js" type="text/javascript">
-    </script>
+    <script src="http://assets.locaweb.com.br/locastyle/3.10.0/javascripts/locastyle.js" type="text/javascript"></script>
 
     <link rel="stylesheet" type="text/css"
         href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.22/b-1.6.5/b-colvis-1.6.5/b-flash-1.6.5/b-html5-1.6.5/b-print-1.6.5/datatables.min.css" />
@@ -186,7 +209,16 @@
     <script type="text/javascript"
         src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.22/b-1.6.5/b-colvis-1.6.5/b-flash-1.6.5/b-html5-1.6.5/b-print-1.6.5/datatables.min.js">
     </script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+        integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
+        crossorigin="anonymous"></script> -->
 </body>
+<footer>
+    <div class="card-footer text-muted d-flex justify-content-around"
+        style="
+        background-color: white; border-top-color: rgba(0,0,0, 0.1); margin-left:250px;">
+        &copy; 2020 - Todos os direitos reservados
+    </div>
+</footer>
 
 </html>
