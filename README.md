@@ -2,7 +2,7 @@
 
 ## Baixar Projeto
 ```
-git clone https://github.com/HudsonMota/WebCarHSJv2.git
+git clone https://github.com/HudsonMota/WebCarHSJ_v2.git
 ```
 ## Executar Projeto
 
