@@ -20,7 +20,7 @@ class SolicitacaoController extends Controller
                 DB::raw('id as id'),
                 DB::raw('sector_id as cc'),
                 DB::raw('name as name')
-            )->get();
+            )->orderBy('name', 'ASC')->get();
 
 
         // Retorna os endereços

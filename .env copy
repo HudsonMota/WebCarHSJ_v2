@@ -27,8 +27,8 @@ REDIS_PORT=6379
 MAIL_DRIVER=smtp
 MAIL_HOST=smtp.gmail.com
 MAIL_PORT=587
-MAIL_USERNAME=developmentsoftware.hsj@gmail.com
-MAIL_PASSWORD=deVhSj74$*
+MAIL_USERNAME=name@name
+MAIL_PASSWORD=password
 MAIL_ENCRYPTION=tls
 
 AWS_ACCESS_KEY_ID=

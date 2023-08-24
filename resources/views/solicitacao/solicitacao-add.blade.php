@@ -37,7 +37,7 @@
                                     <option value="" class=" form-control">--</option>
                                     @inject('sectors', '\App\Sector')
                                     @foreach($sectors->getSectors() as $sectors)
-                                    <option value="{{$sectors->cc}}" class=" form-control">{{$sectors->cc}} - {{$sectors->sector}}</option>
+                                    <option value="{{$sectors->cc}}" class=" form-control">{{$sectors->sector}}</option>
                                     @endforeach
                                 </select>
                             </div>

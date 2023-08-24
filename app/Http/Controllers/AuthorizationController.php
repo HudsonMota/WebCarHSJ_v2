@@ -411,7 +411,7 @@ function consultDBAdres($addressRqOrigem, $addressRqDestino): array
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_HTTPHEADER => [
                 "x-rapidapi-host: trueway-matrix.p.rapidapi.com",
-                "x-rapidapi-key: 93aee0b233msh27655e4afe508bap1e1f3cjsn5d2ff066ef84"
+                "x-rapidapi-key: paste here"
             ],
         ]);
 
@@ -454,7 +454,7 @@ function returnLatLng($adresWithoutLatLng)
         CURLOPT_CUSTOMREQUEST => "GET",
         CURLOPT_HTTPHEADER => [
             "x-rapidapi-host: trueway-geocoding.p.rapidapi.com",
-            "x-rapidapi-key: 93aee0b233msh27655e4afe508bap1e1f3cjsn5d2ff066ef84"
+            "x-rapidapi-key: paste here"
         ],
     ]);
 
